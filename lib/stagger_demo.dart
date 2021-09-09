@@ -14,11 +14,7 @@ class _StaggerDemoState extends State<StaggerDemo>
   @override
   void initState() {
     super.initState();
-
-    _controller = AnimationController(
-      duration: const Duration(milliseconds: 2000),
-      vsync: this,
-    );
+    _controller = AnimationController(vsync: this);
   }
 
   // ...Boilerplate...
@@ -34,7 +30,7 @@ class _StaggerDemoState extends State<StaggerDemo>
 
   @override
   Widget build(BuildContext context) {
-    timeDilation = 10.0; // 1.0 is normal animation speed.
+    timeDilation = 1.0; // 1.0 is normal animation speed.
     return Scaffold(
       appBar: AppBar(title: const Text('Staggered Animation')),
       body: GestureDetector(
