@@ -1,4 +1,4 @@
-package com.bestrise.staggered_animations
+package com.bestrise.staggered_animations_sample
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,4 +1,4 @@
-# staggered_animations
+# staggered_animations_sample
 
 This is Flutter application for staggered animations sample.
 

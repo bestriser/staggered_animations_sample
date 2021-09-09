@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:staggered_animations/stagger_animation.dart';
+import 'package:staggered_animations_sample/stagger_animation.dart';
 
 class StaggerDemo extends StatefulWidget {
   @override

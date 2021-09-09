@@ -1,4 +1,4 @@
-name: staggered_animations
+name: staggered_animations_sample
 description: This is Flutter application for staggered animations sample.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1

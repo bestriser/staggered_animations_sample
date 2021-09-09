@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:staggered_animations/stagger_demo.dart';
+import 'package:staggered_animations_sample/stagger_demo.dart';
 
 void main() {
   runApp(MyApp());
