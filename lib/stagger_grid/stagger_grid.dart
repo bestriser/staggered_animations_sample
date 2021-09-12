@@ -2,14 +2,14 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:staggered_animations_sample/stagger_animation.dart';
+import 'package:staggered_animations_sample/stagger_grid/children/stagger_animation.dart';
 
-class StaggerDemo extends StatefulWidget {
+class StaggerGrid extends StatefulWidget {
   @override
-  _StaggerDemoState createState() => _StaggerDemoState();
+  _StaggerGridState createState() => _StaggerGridState();
 }
 
-class _StaggerDemoState extends State<StaggerDemo>
+class _StaggerGridState extends State<StaggerGrid>
     with TickerProviderStateMixin {
   final List<String> _dummyItems = ['a', 'b', 'c', 'd'];
   late List<AnimationController> _controllers;
@@ -43,7 +43,7 @@ class _StaggerDemoState extends State<StaggerDemo>
   Widget build(BuildContext context) {
     timeDilation = 1.0; // 1.0 is normal animation speed.
     return Scaffold(
-      appBar: AppBar(title: const Text('Staggered Animation')),
+      appBar: AppBar(title: const Text('Staggered Grid Animation')),
       body: Center(
         child: GestureDetector(
           onTap: () => _playAnimations(),
