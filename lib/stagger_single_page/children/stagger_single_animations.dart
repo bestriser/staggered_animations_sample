@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class StaggerAnimation extends StatelessWidget {
-  StaggerAnimation(this.controller)
+class StaggerSingleAnimation extends StatelessWidget {
+  StaggerSingleAnimation(this.controller)
       : opacity = Tween<double>(
           begin: 0.0,
           end: 1.0,

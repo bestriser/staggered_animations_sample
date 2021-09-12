@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
-import 'package:staggered_animations_sample/stagger_grid/stagger_grid.dart';
-import 'package:staggered_animations_sample/stagger_single/stagger_single.dart';
+import 'package:staggered_animations_sample/stagger_grid_page/stagger_grid_page.dart';
+import 'package:staggered_animations_sample/stagger_single_page/stagger_single.dart';
 
 class Home extends StatelessWidget {
   @override

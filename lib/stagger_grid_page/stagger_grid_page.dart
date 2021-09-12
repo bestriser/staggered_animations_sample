@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:staggered_animations_sample/stagger_grid/children/stagger_animation.dart';
+import 'package:staggered_animations_sample/stagger_grid_page/children/stagger_grid_animations.dart';
 
 class StaggerGrid extends StatefulWidget {
   @override
@@ -70,7 +70,7 @@ class _StaggerGridState extends State<StaggerGrid>
               ),
               itemCount: _dummyItems.length,
               itemBuilder: (BuildContext context, int index) {
-                return StaggerAnimation(_controllers[index]);
+                return StaggerGridAnimations(_controllers[index]);
               },
             ),
           ),

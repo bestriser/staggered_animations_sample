@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:staggered_animations_sample/stagger_single/children/stagger_animation.dart';
+import 'package:staggered_animations_sample/stagger_single_page/children/stagger_single_animations.dart';
 
 class StaggerSingle extends StatefulWidget {
   @override
@@ -52,7 +52,7 @@ class _StaggerSingleState extends State<StaggerSingle>
               color: Colors.black.withOpacity(0.1),
               border: Border.all(color: Colors.black.withOpacity(0.5)),
             ),
-            child: StaggerAnimation(_controller),
+            child: StaggerSingleAnimation(_controller),
           ),
         ),
       ),
