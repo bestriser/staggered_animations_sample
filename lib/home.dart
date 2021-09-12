@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:staggered_animations_sample/stagger_grid/stagger_grid.dart';
 import 'package:staggered_animations_sample/stagger_single/stagger_single.dart';
 
@@ -20,7 +21,7 @@ class Home extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(width: 8),
+            const Gap(8),
             ElevatedButton(
               child: Text('Grid'),
               onPressed: () => Navigator.of(context).push(
