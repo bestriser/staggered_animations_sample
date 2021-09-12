@@ -4,5 +4,7 @@
 
 `AnimatedBuilder`を使用したアニメーションの組み合わせを実装しました。
 
-https://user-images.githubusercontent.com/55462291/132764279-2101471e-4c5b-4642-94d2-f484e1214821.mov
+https://user-images.githubusercontent.com/55462291/133002797-f75fc7ed-ae9f-49cb-8d9f-41fef999981d.mov
+
+
 
