@@ -20,6 +20,11 @@ class _StaggerSingleState extends State<StaggerSingle>
     );
   }
 
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
   // ...Boilerplate...
 
   Future<void> _playAnimation() async {

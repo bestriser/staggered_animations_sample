@@ -26,13 +26,21 @@ class _StaggerGridState extends State<StaggerGrid>
     );
   }
 
+  @override
+  void dispose() {
+    for (final _controller in _controllers) {
+      _controller.dispose();
+    }
+    super.dispose();
+  }
+
   // ...Boilerplate...
 
   Future<void> _playAnimations() async {
     try {
-      for (final controller in _controllers) {
-        await controller.forward().orCancel;
-        await controller.reverse().orCancel;
+      for (final _controller in _controllers) {
+        await _controller.forward().orCancel;
+        await _controller.reverse().orCancel;
       }
     } on TickerCanceled {
       // the animation got canceled, probably because it was disposed of
