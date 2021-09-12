@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:staggered_animations_sample/stagger_animation.dart';
@@ -9,20 +11,29 @@ class StaggerDemo extends StatefulWidget {
 
 class _StaggerDemoState extends State<StaggerDemo>
     with TickerProviderStateMixin {
-  late AnimationController _controller;
+  final List<String> _dummyItems = ['a', 'b', 'c', 'd'];
+  late List<AnimationController> _controllers;
 
   @override
   void initState() {
     super.initState();
-    _controller = AnimationController(vsync: this);
+    _controllers = List.generate(
+      _dummyItems.length,
+      (i) => AnimationController(
+        vsync: this,
+        duration: const Duration(milliseconds: 1000),
+      ),
+    );
   }
 
   // ...Boilerplate...
 
-  Future<void> _playAnimation() async {
+  Future<void> _playAnimations() async {
     try {
-      await _controller.forward().orCancel;
-      await _controller.reverse().orCancel;
+      for (final controller in _controllers) {
+        await controller.forward().orCancel;
+        await controller.reverse().orCancel;
+      }
     } on TickerCanceled {
       // the animation got canceled, probably because it was disposed of
     }
@@ -33,10 +44,9 @@ class _StaggerDemoState extends State<StaggerDemo>
     timeDilation = 1.0; // 1.0 is normal animation speed.
     return Scaffold(
       appBar: AppBar(title: const Text('Staggered Animation')),
-      body: GestureDetector(
-        behavior: HitTestBehavior.opaque,
-        onTap: () => _playAnimation(),
-        child: Center(
+      body: Center(
+        child: GestureDetector(
+          onTap: () => _playAnimations(),
           child: Container(
             width: 300.0,
             height: 300.0,
@@ -44,7 +54,17 @@ class _StaggerDemoState extends State<StaggerDemo>
               color: Colors.black.withOpacity(0.1),
               border: Border.all(color: Colors.black.withOpacity(0.5)),
             ),
-            child: StaggerAnimation(_controller),
+            child: GridView.builder(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                mainAxisSpacing: 4,
+                crossAxisSpacing: 4,
+              ),
+              itemCount: _dummyItems.length,
+              itemBuilder: (BuildContext context, int index) {
+                return StaggerAnimation(_controllers[index]);
+              },
+            ),
           ),
         ),
       ),
