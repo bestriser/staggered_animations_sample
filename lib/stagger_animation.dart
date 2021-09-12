@@ -16,8 +16,8 @@ class StaggerAnimation extends StatelessWidget {
           ),
         ),
         width = Tween<double>(
-          begin: 50.0,
-          end: 150.0,
+          begin: 25.0,
+          end: 50.0,
         ).animate(
           CurvedAnimation(
             parent: controller,
@@ -29,8 +29,8 @@ class StaggerAnimation extends StatelessWidget {
           ),
         ),
         height = Tween<double>(
-          begin: 50.0,
-          end: 150.0,
+          begin: 25.0,
+          end: 50.0,
         ).animate(
           CurvedAnimation(
             parent: controller,
@@ -56,7 +56,7 @@ class StaggerAnimation extends StatelessWidget {
         ),
         borderRadius = BorderRadiusTween(
           begin: BorderRadius.circular(4.0),
-          end: BorderRadius.circular(75.0),
+          end: BorderRadius.circular(25.0),
         ).animate(
           CurvedAnimation(
             parent: controller,
