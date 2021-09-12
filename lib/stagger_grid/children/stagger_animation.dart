@@ -43,7 +43,7 @@ class StaggerAnimation extends StatelessWidget {
         ),
         padding = EdgeInsetsTween(
           begin: EdgeInsets.only(bottom: 0),
-          end: EdgeInsets.only(bottom: 75),
+          end: EdgeInsets.only(bottom: 50),
         ).animate(
           CurvedAnimation(
             parent: controller,
