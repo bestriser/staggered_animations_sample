@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:staggered_animations_sample/stagger_grid_page/stagger_grid_page.dart';
-import 'package:staggered_animations_sample/stagger_single_page/stagger_single.dart';
+import 'package:staggered_animations_sample/stagger_single_page/stagger_single_page.dart';
 
-class Home extends StatelessWidget {
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,12 +16,12 @@ class Home extends StatelessWidget {
           children: [
             ElevatedButton(
               child: Text('Single'),
-              onPressed: () => Get.to(() => StaggerSingle()),
+              onPressed: () => Get.to(() => StaggerSinglePage()),
             ),
             const Gap(8),
             ElevatedButton(
               child: Text('Grid'),
-              onPressed: () => Get.to(() => StaggerGrid()),
+              onPressed: () => Get.to(() => StaggerGridPage()),
             ),
           ],
         ),

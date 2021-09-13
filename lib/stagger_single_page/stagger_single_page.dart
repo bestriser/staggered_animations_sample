@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:staggered_animations_sample/stagger_single_page/children/stagger_single_animations.dart';
 
-class StaggerSingle extends StatefulWidget {
+class StaggerSinglePage extends StatefulWidget {
   @override
-  _StaggerSingleState createState() => _StaggerSingleState();
+  _StaggerSinglePageState createState() => _StaggerSinglePageState();
 }
 
-class _StaggerSingleState extends State<StaggerSingle>
+class _StaggerSinglePageState extends State<StaggerSinglePage>
     with TickerProviderStateMixin {
   late AnimationController _controller;
 

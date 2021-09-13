@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:staggered_animations_sample/stagger_grid_page/children/stagger_grid_animations.dart';
 
-class StaggerGrid extends StatefulWidget {
+class StaggerGridPage extends StatefulWidget {
   @override
-  _StaggerGridState createState() => _StaggerGridState();
+  _StaggerGridPageState createState() => _StaggerGridPageState();
 }
 
-class _StaggerGridState extends State<StaggerGrid>
+class _StaggerGridPageState extends State<StaggerGridPage>
     with TickerProviderStateMixin {
   final List<String> _dummyItems = ['a', 'b', 'c', 'd'];
   late List<AnimationController> _controllers;
