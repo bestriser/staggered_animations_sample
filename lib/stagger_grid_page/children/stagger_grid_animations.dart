@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class StaggerAnimation extends StatelessWidget {
-  StaggerAnimation(this.controller)
+class StaggerGridAnimations extends StatelessWidget {
+  StaggerGridAnimations(this.controller)
       : opacity = Tween<double>(
           begin: 0.0,
           end: 1.0,
@@ -16,8 +16,8 @@ class StaggerAnimation extends StatelessWidget {
           ),
         ),
         width = Tween<double>(
-          begin: 50.0,
-          end: 150.0,
+          begin: 25.0,
+          end: 50.0,
         ).animate(
           CurvedAnimation(
             parent: controller,
@@ -29,8 +29,8 @@ class StaggerAnimation extends StatelessWidget {
           ),
         ),
         height = Tween<double>(
-          begin: 50.0,
-          end: 150.0,
+          begin: 25.0,
+          end: 50.0,
         ).animate(
           CurvedAnimation(
             parent: controller,
@@ -43,7 +43,7 @@ class StaggerAnimation extends StatelessWidget {
         ),
         padding = EdgeInsetsTween(
           begin: EdgeInsets.only(bottom: 0),
-          end: EdgeInsets.only(bottom: 75),
+          end: EdgeInsets.only(bottom: 50),
         ).animate(
           CurvedAnimation(
             parent: controller,
@@ -56,7 +56,7 @@ class StaggerAnimation extends StatelessWidget {
         ),
         borderRadius = BorderRadiusTween(
           begin: BorderRadius.circular(4.0),
-          end: BorderRadius.circular(75.0),
+          end: BorderRadius.circular(25.0),
         ).animate(
           CurvedAnimation(
             parent: controller,

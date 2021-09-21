@@ -1,22 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:staggered_animations_sample/stagger_animation.dart';
+import 'package:staggered_animations_sample/stagger_single_page/children/stagger_single_animations.dart';
 
-class StaggerDemo extends StatefulWidget {
+class StaggerSinglePage extends StatefulWidget {
   @override
-  _StaggerDemoState createState() => _StaggerDemoState();
+  _StaggerSinglePageState createState() => _StaggerSinglePageState();
 }
 
-class _StaggerDemoState extends State<StaggerDemo>
+class _StaggerSinglePageState extends State<StaggerSinglePage>
     with TickerProviderStateMixin {
   late AnimationController _controller;
 
   @override
   void initState() {
     super.initState();
-    _controller = AnimationController(vsync: this);
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 1000),
+    );
   }
 
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
   // ...Boilerplate...
 
   Future<void> _playAnimation() async {
@@ -32,7 +40,7 @@ class _StaggerDemoState extends State<StaggerDemo>
   Widget build(BuildContext context) {
     timeDilation = 1.0; // 1.0 is normal animation speed.
     return Scaffold(
-      appBar: AppBar(title: const Text('Staggered Animation')),
+      appBar: AppBar(title: const Text('Staggered Single Animation')),
       body: GestureDetector(
         behavior: HitTestBehavior.opaque,
         onTap: () => _playAnimation(),
@@ -44,7 +52,7 @@ class _StaggerDemoState extends State<StaggerDemo>
               color: Colors.black.withOpacity(0.1),
               border: Border.all(color: Colors.black.withOpacity(0.5)),
             ),
-            child: StaggerAnimation(_controller),
+            child: StaggerSingleAnimation(_controller),
           ),
         ),
       ),
