@@ -86,7 +86,7 @@ class StaggerSingleAnimation extends StatelessWidget {
   final Animation<double> width;
   final Animation<double> height;
   final Animation<EdgeInsets> padding;
-  final Animation<BorderRadius> borderRadius;
+  final Animation<BorderRadius?> borderRadius;
   final Animation<Color?> color;
 
   @override
