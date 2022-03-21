@@ -35,7 +35,6 @@ class _StaggerSinglePageState extends State<StaggerSinglePage>
     return Scaffold(
       appBar: AppBar(title: const Text('Staggered Single Animation')),
       body: GestureDetector(
-        behavior: HitTestBehavior.opaque,
         onTap: () => _playAnimation(),
         child: Center(
           child: Container(
