@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:staggered_animations_sample/stagger_grid_page/children/stagger_grid_animations.dart';
 
 class StaggerGridPage extends StatefulWidget {
@@ -43,9 +42,6 @@ class _StaggerGridPageState extends State<StaggerGridPage>
 
   @override
   Widget build(BuildContext context) {
-    // 数値を減らすと速くなり、数値を増やすと遅くなります
-    timeDilation = 1.0;
-
     return Scaffold(
       appBar: AppBar(title: const Text('Staggered Grid Animation')),
       body: Center(

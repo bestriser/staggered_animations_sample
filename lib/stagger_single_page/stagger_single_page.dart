@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:staggered_animations_sample/stagger_single_page/children/stagger_single_animations.dart';
 
 class StaggerSinglePage extends StatefulWidget {
@@ -33,9 +32,6 @@ class _StaggerSinglePageState extends State<StaggerSinglePage>
 
   @override
   Widget build(BuildContext context) {
-    // 数値を減らすと速くなり、数値を増やすと遅くなります
-    timeDilation = 1.0;
-
     return Scaffold(
       appBar: AppBar(title: const Text('Staggered Single Animation')),
       body: GestureDetector(
