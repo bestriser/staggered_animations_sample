@@ -34,22 +34,18 @@ class _StaggerGridPageState extends State<StaggerGridPage>
     super.dispose();
   }
 
-  // ...Boilerplate...
-
   Future<void> _playAnimations() async {
-    try {
-      for (final _controller in _controllers) {
-        await _controller.forward().orCancel;
-        await _controller.reverse().orCancel;
-      }
-    } on TickerCanceled {
-      // the animation got canceled, probably because it was disposed of
+    for (final _controller in _controllers) {
+      await _controller.forward().orCancel;
+      await _controller.reverse().orCancel;
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    timeDilation = 1.0; // 1.0 is normal animation speed.
+    // 1.0 is normal animation speed.
+    timeDilation = 1.0;
+
     return Scaffold(
       appBar: AppBar(title: const Text('Staggered Grid Animation')),
       body: Center(
