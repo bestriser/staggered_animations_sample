@@ -27,8 +27,8 @@ class _StaggerSinglePageState extends State<StaggerSinglePage>
   }
 
   Future<void> _playAnimation() async {
-    await _controller.forward().orCancel;
-    await _controller.reverse().orCancel;
+    await _controller.forward();
+    await _controller.reverse();
   }
 
   @override

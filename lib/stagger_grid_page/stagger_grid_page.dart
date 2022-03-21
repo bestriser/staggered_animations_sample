@@ -36,8 +36,8 @@ class _StaggerGridPageState extends State<StaggerGridPage>
 
   Future<void> _playAnimations() async {
     for (final _controller in _controllers) {
-      await _controller.forward().orCancel;
-      await _controller.reverse().orCancel;
+      await _controller.forward();
+      await _controller.reverse();
     }
   }
 
