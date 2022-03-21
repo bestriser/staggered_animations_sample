@@ -33,7 +33,7 @@ class _StaggerSinglePageState extends State<StaggerSinglePage>
 
   @override
   Widget build(BuildContext context) {
-    // 1.0 is normal animation speed.
+    // 数値を減らすと速くなり、数値を増やすと遅くなります
     timeDilation = 1.0;
 
     return Scaffold(
